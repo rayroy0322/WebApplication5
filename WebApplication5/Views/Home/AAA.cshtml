@@ -1,0 +1,519 @@
+﻿
+@{
+    ViewBag.Title = "AAA";
+}
+
+<div style="height:800px;width:100%;background:#00ffff;
+    position:relative">
+
+    <div style="height:50px;width:70%;background:#b6ff00;">
+        <font style="font-size:35px">白玉樓</font>
+    </div>
+
+    <div style="height:500px;width:70%;
+        position:absolute;">
+        <img src="~/image/map01.jpg" style="height:500px;width:100%" />
+        <img class="arrow" src="~/image/arrow.png" style="left:0" />
+        <img class="arrow" src="~/image/arrw02.png" style="left:85%" />
+        <style>
+            .arrow {
+                height: 100px;
+                width: auto;
+                z-index: 2;
+                position: absolute;
+                top: 70%;
+            }
+        </style>
+    </div>
+
+
+
+    <div style="height:50px;width:800px;background:#74a76b;
+        position:absolute;top:550px">
+        <table style="height:auto;width:70%;
+                position:absolute;top:3px;left:5%">
+            <tr>
+                <th>
+                    <button id="button01" style="height:45px;width:90px;font-size:30px" onclick="Forward()">前進</button>
+                </th>
+                <th>
+                    <button id="button02" style="height:45px;width:90px;font-size:30px" onclick="fighting()">戰鬥</button>
+                </th>
+                <th>
+                    <button id="button03" style="height:45px;width:90px;font-size:30px" onclick="explore()">探索</button>
+                </th>
+                <th>
+                    <button id="button04" style="height:45px;width:90px;font-size:30px" onclick="rest()">休息</button>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+    <div style="height:200px;width:70%;background:#eeecbf;
+        position:absolute;top:600px;">
+        <font id="test1">文字敘述</font>
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#button01").click(function () {
+                $("#test1").text("往前了一段距離");
+            });
+            $("#button02").click(function () {
+                $("#test1").text("戰鬥中");
+            });
+            $("#button03").click(function () {
+                $("#test1").text("採集中");
+            });
+            $("#button04").click(function () {
+                $("#test1").text("休息中");
+            });
+        });
+
+        
+    </script>
+
+    <div style="height:800px;width:30%;background:#00ff21;
+        position:absolute;top:0%;left:70%">
+
+        <div style="height:300px;width:100%;background:#ffd800">
+            人物狀態
+            <table style="height:100px;width:100%;background:#fff">
+                <tr>
+                    <th class="hp1">
+                        血量:
+                    </th>
+                    <th>
+                        <canvas id="hp" style="height:30px;width:70%"></canvas>
+                    </th>
+                </tr>
+                <tr>
+                    <th class="hp1">
+                        精神力:
+                    </th>
+                    <th>
+                        <canvas id="mp" style="height:30px;width:70%"></canvas>
+                    </th>
+                </tr>
+                <tr>
+                    <th class="hp1">
+                        體力:
+                    </th>
+                    <th>
+                        <canvas id="vit" style="height:30px;width:70%"></canvas>
+                    </th>
+                </tr>
+            </table>
+            <style>
+                .hp1 {
+                    width: 15%
+                }
+            </style>
+
+            <script>
+                var ctx = document.getElementById('hp').getContext('2d');
+                var hp = new Chart(ctx, {
+                    type: "horizontalBar",
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            label: 'Count 1',
+                            data: [10],
+                            backgroundColor:
+                                'rgba(255, 99, 132, 0.2)'
+                        }, {
+                            label: 'Count 2',
+                            data: [8],
+                            backgroundColor:
+                                'rgba(54, 162, 235, 0.2)'
+                        }]
+                    },
+                    options: {
+                        legend: {
+                            display: false
+                        },
+                        scales: {
+                            xAxes: [{
+                                stacked: true,
+                                ticks: { min: 0, max: 18 },
+                                display: false
+                            }],
+                            yAxes: [{
+                                display: false,
+                                stacked: true,
+                            }]
+                        }
+                    }
+                });
+
+                var ctx = document.getElementById('mp').getContext('2d');
+                var mp = new Chart(ctx, {
+                    type: "horizontalBar",
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            label: 'Count 1',
+                            data: [200],
+                            backgroundColor:
+                                'rgba(255, 99, 132, 0.2)'
+                        }, {
+                            label: 'Count 2',
+                            data: [100],
+                            backgroundColor:
+                                'rgba(54, 162, 235, 0.2)'
+                        }]
+                    },
+                    options: {
+                        legend: {
+                            display: false
+                        },
+                        scales: {
+                            xAxes: [{
+                                stacked: true,
+                                ticks: { min: 0, max: 300 },
+                                display: false
+                            }],
+                            yAxes: [{
+                                display: false,
+                                stacked: true,
+                            }]
+                        }
+                    }
+                });
+
+                var ctx = document.getElementById('vit').getContext('2d');
+                var vit = new Chart(ctx, {
+                    type: "horizontalBar",
+                    data: {
+                        labels: [],
+                        datasets: [{
+                            label: 'Count 1',
+                            data: [15],
+                            backgroundColor:
+                                'rgba(255, 99, 132, 0.2)'
+                        }, {
+                            label: 'Count 2',
+                            data: [5],
+                            backgroundColor:
+                                'rgba(54, 162, 235, 0.2)'
+                        }]
+                    },
+                    options: {                        
+                        legend: {
+                            display: false
+                        },
+                        scales: {
+                            xAxes: [{
+                                stacked: true,
+                                ticks: { min: 0, max: 20 },
+                                display: false
+                            }],
+                            yAxes: [{
+                                stacked: true,
+                                display: false
+                            }]
+                        }
+                    }
+                });
+            </script>
+
+
+            <table id="ability" style="height:150px;width:100%;background:#ff6a00;">
+                <tr>
+                    <th>
+                        物理攻擊力:
+                    </th>
+                    <th class="a1">
+                        物理攻擊力:
+                    </th>
+                    <th>
+                        物理防禦力:
+                    </th>
+                    <th class="a2">
+                        物理攻擊力:
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        特殊攻擊力:
+                    </th>
+                    <th class="a3">
+                        特殊攻擊力:
+                    </th>
+                    <th>
+                        特殊防禦力:
+                    </th>
+                    <th class="a4">
+                        特殊防禦力:
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        力量:
+                    </th>
+                    <th class="a5">
+                        力量:
+                    </th>
+                    <th>
+                        魔力:
+                    </th>
+                    <th class="a6">
+                        魔力:
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        迴避:
+                    </th>
+                    <th class="a7">
+                        迴避:
+                    </th>
+                    <th>
+                        命中:
+                    </th>
+                    <th class="a8">
+                        命中:
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        靈力:
+                    </th>
+                    <th class="a9">
+                        靈力:
+                    </th>
+                    <th>
+                        幸運:
+                    </th>
+                    <th class="a10">
+                        幸運:
+                    </th>
+                </tr>
+            </table>
+
+            <script>
+                var ability = [
+                    {
+                        'a1': 'SSS',
+                        'a2': 'SS',
+                        'a3': 'S',
+                        'a4': 'A',
+                        'a5': 'B',
+                        'a6': 'C',
+                        'a7': 'D',
+                        'a8': 'E',
+                        'a9': 'F',
+                        'a10': 'FF',
+                    }
+                ]
+                //顯示能力值
+                $.each(ability, function (index, element) {
+                    $('.a1').text(element.a1);
+                    $('.a2').text(element.a2);
+                    $('.a3').text(element.a3);
+                    $('.a4').text(element.a4);
+                    $('.a5').text(element.a5);
+                    $('.a6').text(element.a6);
+                    $('.a7').text(element.a7);
+                    $('.a8').text(element.a8);
+                    $('.a9').text(element.a9);
+                    $('.a10').text(element.a10);
+                });
+            </script>
+
+        </div>
+
+        <div style="height:500px;width:100%;background:#ff6a00">
+
+            <div id='Inventory' style="height:305px;width:100%;background:#808080">
+
+                <style>
+                    .backpack {
+                        height: 50px;
+                        background: #ffffff;
+                        border: 1px solid black;
+                    }
+                </style>
+                <table style="width:100%;position:absolute;
+                    border-collapse:separate;border:1px solid black;">
+                    <tr>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                    <tr>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                        <th class="backpack">
+
+                        </th>
+                    </tr>
+                </table>
+
+                <div>
+
+                </div>
+            </div>
+
+            <div>
+
+            </div>
+
+
+
+            <style>
+                .View {
+                    height: 100%;
+                    width: 25%;
+                    text-align: center;
+                }
+            </style>
+            <table style="height:50px;width:100%;background:#b6ff00">
+                <tr>
+                    <th class="View">
+                        背包
+                    </th>
+                    <th class="View">
+                        裝備查看
+                    </th>
+                    <th class="View">
+                        一般圖鑑
+                    </th>
+                    <th class="View">
+                        地圖
+                    </th>
+                </tr>
+                <tr>
+                    <th class="View">
+                        NPC圖鑑
+                    </th>
+                    <th class="View">
+                        一般圖鑑
+                    </th>
+                    <th class="View">
+                        地圖
+                    </th>
+                    <th class="View">
+                        技能
+                    </th>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+

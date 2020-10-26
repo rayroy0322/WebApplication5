@@ -1,0 +1,338 @@
+﻿
+@{
+    ViewBag.Title = "BBB";
+}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        var b =
+            [
+                {
+                    'cliniclist': [
+                        {
+                            "name": "診所名",
+                            'number': '醫事代碼',
+                            'account': '帳號',
+                            'password': '密碼',
+                            'his': 'His',
+                            'Laboratory': '檢驗所',
+                            'address': '地址',
+                            'cal': '電話'
+                        },
+                        {
+                            "name": "康德",
+                            'number': '3512013485',
+                            'account': '1111',
+                            'password': '0955999260',
+                            'his': '展望',
+                            'Laboratory': '聯合',
+                            'address': '新竹市東區新莊里光復路一段362之2號',
+                            'cal': '03-5788282'
+                        },
+                        {
+                            "name": "博新",
+                            'number': '3531031878',
+                            'account': '1',
+                            'password': '1111',
+                            'his': '耀聖',
+                            'Laboratory': '',
+                            'address': '新北市永和區仁愛路24號',
+                            'cal': '02-32334150'
+                        },
+                        {
+                            "name": "怡兒",
+                            'number': '3531081538',
+                            'account': '1111',
+                            'password': '0955999260',
+                            'his': '耀聖',
+                            'Laboratory': '優品',
+                            'address': '新北市鶯歌區建國路173號1－3樓',
+                            'cal': '02-26707200'
+                        },
+                        {
+                            "name": "敏昌",
+                            'number': '3532022515',
+                            'account': '1111',
+                            'password': '1111',
+                            'his': '耀聖',
+                            'Laboratory': '聯合',
+                            'address': '桃園市中壢區福德路32號',
+                            'cal': '03-4550348'
+                        },
+                        {
+                            "name": "心安",
+                            'number': '3532026817',
+                            'account': '1111',
+                            'password': '0955999260',
+                            'his': '耀聖',
+                            'Laboratory': '聯合',
+                            'address': '桃園市中壢區新中北路二段487號1樓、2樓',
+                            'cal': '03-4518808'
+                        },
+                        {
+                            "name": "長安",
+                            'number': '3532050484',
+                            'account': '1',
+                            'password': '1111',
+                            'his': '耀聖',
+                            'Laboratory': '聯合',
+                            'address': '',
+                            'cal': ''
+                        },
+                        {
+                            "name": "維賢",
+                            'number': '3532102287',
+                            'account': '1111',
+                            'password': '0955999260',
+                            'his': '耀聖',
+                            'Laboratory': '聯合',
+                            'address': '桃園市平鎮區和平路123號1樓及125號1、2樓',
+                            'cal': '03-4683636'
+                        },
+                        {
+                            "name": "凱程",
+                            'number': '3531045765',
+                            'account': '1111',
+                            'password': 'hiscms',
+                            'his': '展望',
+                            'Laboratory': '聯合',
+                            'address': '',
+                            'cal': ''
+                        }
+                    ]
+                },
+                {
+                    'event': [
+                        {
+                            'day': '',
+                            'id': '',
+                            "name": "診所",
+                            'content': '問題內容',
+                            'method': '解決方法',
+                            'status': 'N',
+                        },
+                        {
+                            'day': '2020/9/28',
+                            'id': '20200928a',
+                            "name": "長安",
+                            'content': '一鍵連結問題跑掉',
+                            'method': 'TV連線修改',
+                            'status': 'Y',
+                        },
+                        {
+                            'day': '2020/9/28',
+                            'id': '20200928b',
+                            "name": "長安",
+                            'content': '新病人一鍵連結，名子不完整',
+                            'method': '會員資料改正',
+                            'status': 'Y',
+                        },
+                        {
+                            'day': '2020/9/28',
+                            'id': '20200928c',
+                            "name": "凱程",
+                            'content': '表單醫師身分證號修改',
+                            'method': '修改',
+                            'status': 'Y',
+                        },
+                        {
+                            'day': '2020/9/28',
+                            'id': '20200928d',
+                            "name": "博新",
+                            'content': '抓成人健檢的名單108/9/1-109/8/31',
+                            'method': '匪哥處裡',
+                            'status': 'Y',
+                        },
+                        {
+                            'day': '2020/9/28',
+                            'id': '20200928d',
+                            "name": "凱程",
+                            'content': '申報黨未匯入',
+                            'method': '對方手上有檔案，對方自己匯入',
+                            'status': 'Y',
+                        },
+                    ]                          
+                }                       
+            ]
+                
+            
+
+        if (typeof FileReader == "undified") {
+            alert("您老的瀏覽器不行了！");
+        }
+        
+        function showDataByURL() {
+            var resultFile = document.getElementById("fileDemo").files[0];
+            if (resultFile) {
+                var reader = new FileReader();
+                reader.readAsDataURL(resultFile);
+                reader.onload = function (e) {
+                    var urlData = this.result;
+                    document.getElementById("result").innerHTML = "<img src='" + urlData + "' alt='" + resultFile.name + "' />";
+                };
+
+            }
+        }
+        
+        function showDataByBinaryString() {
+            var resultFile = document.getElementById("fileDemo").files[0];
+            if (resultFile) {
+                var reader = new FileReader();
+                //非同步方式，不會影響主執行緒
+                reader.readAsBinaryString(resultFile);
+
+                reader.onload = function (e) {
+                    alert(this.result)
+                    var urlData = this.result;   
+
+                    var a = JSON.parse(urlData);
+                    var a = jQuery.parseJSON();
+                    /*
+                    $.each(b, function (index, element) {
+                        var tr = document.createElement("tr");
+                        $('#table').append(tr);
+                        var td = document.createElement("td");
+                        $(td).text(element.width);
+                        $(tr).append(td);
+                    });
+                    */                   
+                    document.getElementById("result").innerHTML = urlData;
+                };
+            }
+        }
+        
+        function showDataByText() {
+            var resultFile = document.getElementById("fileDemo").files[0];
+            if (resultFile) {
+                var reader = new FileReader();
+
+                reader.readAsText(resultFile, 'UTF-8');
+                reader.onload = function (e) {
+                    var urlData = this.result;
+                    var a = eval(urlData)
+                    
+                    $.each(a, function (index, element) {
+                        //診所資料
+                        $.each(element.cliniclist, function (index, element) {
+                            var tr = document.createElement("tr");
+                            $('#table').append(tr);
+                            var td0 = document.createElement("td");
+                            $(td0).text(element.name);
+                            $(td0).css('border', '1px solid black');
+                            $(tr).append(td0);
+                            var td1 = document.createElement("td");
+                            $(td1).text(element.number);
+                            $(td1).css('border', '1px solid black');
+                            $(tr).append(td1);
+                            var td2 = document.createElement("td");
+                            $(td2).text(element.account);
+                            $(td2).css('border', '1px solid black');
+                            $(tr).append(td2);
+                            var td3 = document.createElement("td");
+                            $(td3).css('border', '1px solid black');
+                            $(td3).text(element.password);
+                            $(tr).append(td3);
+                            var td4 = document.createElement("td");
+                            $(td4).text(element.his);
+                            $(td4).css('border', '1px solid black');
+                            $(tr).append(td4);
+                            var td5 = document.createElement("td");
+                            $(td5).text(element.Laboratory);
+                            $(td5).css('border', '1px solid black');
+                            $(tr).append(td5);
+                            var td6 = document.createElement("td");
+                            $(td6).text(element.address);
+                            $(td6).css('border', '1px solid black');
+                            $(tr).append(td6);
+                            var td7 = document.createElement("td");
+                            $(td7).text(element.cal);
+                            $(td7).css('border', '1px solid black');
+                            $(tr).append(td7);
+                        });
+                        var sameid = []
+                        $.each(element.event, function (index, element) {
+                            var tr = document.createElement("tr");
+                            $('#table02').append(tr);
+                            var td0 = document.createElement("td");                         
+                            $(td0).text(element.name);
+                            if (element.status == 'N') {                                
+                                $(td0).css('border', '1px solid black');
+                                $(tr).append(td0);
+                                var td3 = document.createElement("td");
+                                $(td3).text(element.day);
+                                $(td3).css('border', '1px solid black');
+                                $(tr).append(td3);
+                                var td1 = document.createElement("td");
+                                $(td1).text(element.content);
+                                $(td1).css('border', '1px solid black');
+                                $(tr).append(td1);
+                                var td2 = document.createElement("td");
+                                $(td2).text(element.method);
+                                $(td2).css('border', '1px solid black');
+                                $(tr).append(td2);
+                                var td4 = document.createElement("td");
+                                $(td4).text(element.id);
+                                $(td4).attr('class','id')
+                                $(td4).css('border', '1px solid black');
+                                $(tr).append(td4);
+                            }
+                            if (element.status == "O") {
+                                $(td0).css('border', '1px solid black');
+                                $(tr).append(td0);
+                                var td3 = document.createElement("td");
+                                $(td3).text(element.day);
+                                $(td3).css('border', '1px solid black');
+                                $(tr).append(td3);
+                                var td1 = document.createElement("td");
+                                $(td1).text(element.content);
+                                $(td1).css('border', '1px solid black');
+                                $(tr).append(td1);
+                                var td2 = document.createElement("td");
+                                $(td2).text(element.method);
+                                $(td2).css('border', '1px solid black');
+                                $(tr).append(td2); 
+                                var td4 = document.createElement("td");
+                                $(td4).text(element.id);
+                                $(td4).css('border', '1px solid black');
+                                $(tr).append(td4);
+                            }                            
+                        });
+                    });                            
+                    //document.getElementById("result").innerHTML = urlData;
+                };
+            }           
+        }
+
+
+        
+    </script>
+</head>
+<body>
+    <input type="file" name="fileDemo" id="fileDemo" multep />
+    <input type="button" value="readAsDataURL" id="readAsDataURL" onclick="showDataByURL();" />
+    <input type="button" value="readAsBinaryString" id="readAsBinaryString" onclick="showDataByBinaryString();" />
+    <input type="button" value="readAsText" id="readAsText" onclick="showDataByText();" />
+    <div id="result">
+
+    </div>
+    <table id="table" style="border-collapse:separate;border:1px solid black"></table>
+
+    <div>
+        診所未處理完成事件
+        <table id="table02">
+
+        </table>
+    </div>
+
+    <div>
+        事件日期查詢
+    </div>
+    
+
+</body>
+</html>

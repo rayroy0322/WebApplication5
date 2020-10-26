@@ -1,0 +1,1825 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<style>
+    .a1 {
+        height: auto;
+        width: 100%;
+        background: #ffffff;
+    }
+
+    .a2 {
+        height: 40px;
+        width: 10%;
+    }
+
+    .b0 {
+        background: #479e90;
+        font-size: 20px;
+        font-family: Microsoft JhengHei;
+        color:#ffffff;
+    }
+    .b1 {       
+        background: #5cb75c;
+        color:#ffffff;
+        font-size: 15px
+    }
+
+    .b2 {
+        background: #ffffff;       
+    }
+    .button {
+        height:50px;
+        width:100px;       
+        font-size: 30px;
+        font-family: Microsoft JhengHei
+    }
+    .ordfa_1_1 {
+        background:#f5ffdd;
+        width: 30%;
+        font-size: 25px;
+        color: #ff0000
+    }
+    .ordfa_1_2 {
+        background:#ffffff;
+        width: 70%;
+        font-size: 25px;
+        color: #1a319b
+    }
+    .ordfa_2_a {
+        color: #ffffff;
+        background: #5cb75c;
+        text-align: center;
+    }
+    .filter_1 {
+        height: 40px;
+        width: 94%;
+        background: #5cb75c;
+        border-radius: 10px;
+    }
+    .filter_3 {
+        height:32px;
+        width: 50px;
+        font-size: 25px;
+    }
+    .filter_4 {
+        height:32px;
+        width: 50px;
+        font-size: 25px;
+    }
+    .filter_5 {
+        height: 32px;
+        width: 105px;
+        font-size: 25px;
+    }
+    .filter_6 {
+        height: 40px;
+        width: 115px;
+        font-size: 25px;
+    }
+</style>
+
+<div class="a1" style="border:2px solid  #479e90">
+
+    <table style="width:100%;text-align:center;">
+        <tr>
+            <td class="b0">
+                總表統計
+            </td>
+            <td class="b0">
+                醫師合理量
+            </td>
+            <td class="b0">
+                費用明細
+            </td>
+            <td class="b0">
+                年齡層分布
+            </td>
+            <td class="b0">
+                指標分析
+            </td>
+            <td class="b0">
+                細項名單
+            </td>
+            <td class="b0">
+                申報檢核
+            </td>
+            <td class="b0">
+                執行人員
+            </td>
+            <td class="b0">
+                檢驗須知
+            </td>
+        </tr>
+    </table>
+
+
+    <div style="height:800px;position:relative;background:#f5ffdd">
+        <div style="height:80px">
+            <font style="font-size:30px;font-family:Microsoft JhengHei;position:absolute;top:1%;left:3%">資茵診所  申報費用明細</font>
+            <font style="font-size:20px;font-family:Microsoft JhengHei;position:absolute;top:6%;left:1%">院所代號:</font>
+            <font style="font-size:20px;font-family:Microsoft JhengHei;position:absolute;top:6%;left:9%" color="#ff0000">353720001</font>
+            <font style="font-size:20px;font-family:Microsoft JhengHei;position:absolute;top:6%;left:20%">費用年月:</font>
+            <font style="font-size:20px;font-family:Microsoft JhengHei;position:absolute;top:6%;left:28%" color="#ff0000">109年9月</font>
+        </div>
+
+        <div style="width:75%;overflow:auto;">
+            <table RULES=ROWS class="dtlfatable" style="height:40px;width:7000px;text-align:center;background:#ffffff;border:3px #cccccc solid;" cellpadding="10" border='1'>
+                <tr style="background:#4cff00">
+                    <td class="b1">
+                        案件分類
+                    </td>
+                    <td class="b1">
+                        流水編號
+                    </td>
+                    <td class="b1">
+                        身分證統一編碼
+                    </td>
+                    <td class="b1">
+                        特定治療項目代號(一)
+                    </td>
+                    <td class="b1">
+                        特定治療項目代號(二)
+                    </td>
+                    <td class="b1">
+                        特定治療項目代號(三)
+                    </td>
+                    <td class="b1">
+                        特定治療項目代號(四)
+                    </td>
+                    <td class="b1">
+                        就醫科別
+                    </td>
+                    <td class="b1">
+                        就醫日期
+                    </td>
+                    <td class="b1">
+                        治療結束日期
+                    </td>
+
+
+                    <td class="b1">
+                        出生年月日
+                    </td>
+                    <td class="b1">
+                        補報原因註記
+                    </td>
+                    <td class="b1">
+                        整合式照護計畫註記 X
+                    </td>
+                    <td class="b1">
+                        給付類別
+                    </td>
+                    <td class="b1">
+                        部分負擔代號
+                    </td>
+                    <td class="b1">
+                        轉入或原處方或轉檢或代檢
+                        之註記
+                    </td>
+                    <td class="b1">
+                        轉入或原處方或轉檢或代檢
+                        之服務機構代號
+                    </td>
+                    <td class="b1">
+                        病患是否轉出
+                    </td>
+                    <td class="b1">
+                        國際疾病分類號(一)
+                    </td>
+                    <td class="b1">
+                        國際疾病分類號(二)
+                    </td>
+
+                    <td class="b1">
+                        國際疾病分類號(三)
+                    </td>
+                    <td class="b1">
+                        國際疾病分類號(四)
+                    </td>
+                    <td class="b1">
+                        國際疾病分類號(五)
+                    </td>
+                    <td class="b1">
+                        主手術代碼
+                    </td>
+                    <td class="b1">
+                        次手術代碼
+                    </td>
+                    <td class="b1">
+                        次手術代碼(二)
+                    </td>
+                    <td class="b1">
+                        給藥日份
+                    </td>
+                    <td class="b1">
+                        處方調劑方式
+                    </td>
+                    <td class="b1">
+                        健保卡就醫序號
+                    </td>
+                    <td class="b1">
+                        診治醫師代號
+                    </td>
+
+                    <td class="b1">
+                        藥師代號
+                    </td>
+                    <td class="b1">
+                        用藥明細點數小計
+                    </td>
+                    <td class="b1">
+                        診療明細點數小計
+                    </td>
+                    <td class="b1">
+                        特殊材料明細點數小計
+                    </td>
+                    <td class="b1">
+                        診察費項目代號
+                    </td>
+                    <td class="b1">
+                        診察費點數
+                    </td>
+                    <td class="b1">
+                        藥事服務費項目代號
+                    </td>
+                    <td class="b1">
+                        藥事服務費點數
+                    </td>
+                    <td class="b1">
+                        合計點數
+                    </td>
+                    <td class="b1">
+                        部分負擔點數
+                    </td>
+
+                    <td class="b1">
+                        申請點數
+                    </td>
+                    <td class="b1">
+                        論病例計酬代碼
+                    </td>
+                    <td class="b1">
+                        行政協助費用點數
+                    </td>
+                    <td class="b1">
+                        慢性病連續處方箋有效期間
+                        總處方日份
+                    </td>
+                    <td class="b1">
+                        依附就醫新生兒出生日期
+                    </td>
+                    <td class="b1">
+                        急診治療起始時間
+                    </td>
+                    <td class="b1">
+                        急診治療結束時間
+                    </td>
+                    <td class="b1">
+                        醫療服務計畫代碼
+                    </td>
+                    <td class="b1">
+                        姓名
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="height:800px;width:25%;background:#ffffff;position:absolute;top:0%;left:75%;overflow:auto;">
+
+            <table class="dtlfatable_2" RULES=ROWS style="width:100%; padding:1; border-left:5px #479e90 solid;border-right: 5px #479e90 solid" cellpadding="10" border='1'></table>
+
+
+        </div>
+
+        <button class="button" style="position: absolute;top: 3%;left: 65%;" onclick="ordfa()">醫令</button>
+        <button class="button" style="position: absolute;top: 3%;left: 55%;" onclick="filter()">篩選</button>
+
+    </div>
+
+    
+</div>
+
+<div class="ordfa" style="height:500px;width:400px;position:fixed;top:30%;left:60%;background:#ffffff;border: 5px #479e90 solid;display:none">
+    <div style="height:40px;width:100%;background:#479e90;text-align:center;">
+        <font style="font-size:30px;color:#ffffff">醫令</font>
+    </div>
+
+
+    <table class="ordfa_1" style="height:150px;width:100%;background:#4cff00;text-align:center;border:3px #cccccc solid;" cellpadding="10" border='1'></table>
+
+    <table class="ordfa_2" style="height:auto;width:100%;text-align:center;border:3px #cccccc solid;" cellpadding="10" border='1'></table>
+</div>
+
+<div class="filter" style="height:440px;width:400px;position:fixed;top:30%;left:30%;background:#f5ffdd;border: 5px #479e90 solid;display:none">
+    <div style="height:40px;width:100%;background:#479e90;text-align:center;">
+        <font style="font-size:30px;color:#ffffff">篩選條件</font>
+    </div>
+
+    <div class="filter_1" style="position:absolute;top:11%;left:3%">
+        <input class="filter_2" type="checkbox" value="1" style="position:absolute;top:20%;left:5%">
+        <font style="font-size:25px;color:#ffffff;position:absolute;top:10%;left:15%">案   件</font>
+        <select class="filter_3" style="position:absolute;top:10%;left:45%">
+            <option VALUE="1">01 一般案件</option>
+            <option VALUE="2">02 其他專案</option>
+            <option VALUE="3">03 預防保健</option>
+        </select>
+        <select class="filter_3" style="position:absolute;top:10%;left:60%">
+            <option VALUE="1">01 一般案件</option>
+            <option VALUE="2">02 其他專案</option>
+            <option VALUE="3">03 預防保健</option>
+        </select>
+        <select class="filter_3" style="position:absolute;top:10%;left:75%">
+            <option VALUE="1">01 一般案件</option>
+            <option VALUE="2">02 其他專案</option>
+            <option VALUE="3">03 預防保健</option>
+        </select>
+    </div>
+
+    <div class="filter_1" style="position:absolute;top:22%;left:3%">
+        <input class="filter_2" type="checkbox" value="1" style="position:absolute;top:20%;left:5%">
+        <font style="font-size:25px;color:#ffffff;position:absolute;top:10%;left:15%">就醫日期</font>
+        <input class="filter_4" value="0" style="position:absolute;top:10%;left:45%" type="number" id="points" name="points" step="1" min="1" max="31">
+        <font style="font-size:40px;color:#ffffff;position:absolute;top:-20%;left:61%">～</font>
+        <input class="filter_4" value="0" style="position:absolute;top:10%;left:75%" type="number" id="points" name="points" step="1" min="2" max="31">
+
+    </div>
+
+    <div class="filter_1" style="position:absolute;top:33%;left:3%">
+        <input class="filter_2" type="checkbox" value="1" style="position:absolute;top:20%;left:5%">
+        <font style="font-size:25px;color:#ffffff;position:absolute;top:10%;left:15%">醫藥費</font>
+        <select class="filter_3" style="position:absolute;top:10%;left:45%">
+            <option VALUE="1">≦</option>
+            <option VALUE="2">＝</option>
+            <option VALUE="3">≧</option>
+        </select>
+        <input class="filter_5" value="0" style="position:absolute;top:10%;left:60%" type="number" id="points" name="points" step="1" min="0">
+
+    </div>
+
+    <div class="filter_1" style="position:absolute;top:44%;left:3%">
+        <input class="filter_2" type="checkbox" value="1" style="position:absolute;top:20%;left:5%">
+        <font style="font-size:25px;color:#ffffff;position:absolute;top:10%;left:15%">醫療費</font>
+        <select class="filter_3" style="position:absolute;top:10%;left:45%">
+            <option VALUE="1">≦</option>
+            <option VALUE="2">＝</option>
+            <option VALUE="3">≧</option>
+        </select>
+        <input class="filter_5" value="0" style="position:absolute;top:10%;left:60%" type="number" id="points" name="points" step="1" min="0">
+
+    </div>
+
+    <div class="filter_1" style="position:absolute;top:55%;left:3%">
+        <input class="filter_2" type="checkbox" value="1" style="position:absolute;top:20%;left:5%">
+        <font style="font-size:25px;color:#ffffff;position:absolute;top:10%;left:15%">藥服費</font>
+        <select class="filter_3" style="position:absolute;top:10%;left:45%">
+            <option VALUE="1">≦</option>
+            <option VALUE="2">＝</option>
+            <option VALUE="3">≧</option>
+        </select>
+        <input class="filter_5" value="0" style="position:absolute;top:10%;left:60%" type="number" id="points" name="points" step="1" min="0">
+
+    </div>
+
+    <div class="filter_1" style="position:absolute;top:66%;left:3%">
+        <input class="filter_2" type="checkbox" value="1" style="position:absolute;top:20%;left:5%">
+        <font style="font-size:25px;color:#ffffff;position:absolute;top:10%;left:15%">診察費</font>
+        <select class="filter_3" style="position:absolute;top:10%;left:45%">
+            <option VALUE="1">≦</option>
+            <option VALUE="2">＝</option>
+            <option VALUE="3">≧</option>
+        </select>
+        <input class="filter_5" value="0" style="position:absolute;top:10%;left:60%" type="number" id="points" name="points" step="1" min="0">
+
+    </div>
+
+    <div class="filter_1" style="position:absolute;top:77%;left:3%">
+        <input class="filter_2" type="checkbox" value="1" style="position:absolute;top:20%;left:5%">
+        <font style="font-size:25px;color:#ffffff;position:absolute;top:10%;left:15%">申請金額</font>
+        <select class="filter_3" style="position:absolute;top:10%;left:45%">
+            <option VALUE="1">≦</option>
+            <option VALUE="2">＝</option>
+            <option VALUE="3">≧</option>
+        </select>
+        <input class="filter_5" value="0" style="position:absolute;top:10%;left:60%" type="number" id="points" name="points" step="1" min="0">
+
+    </div>
+
+    <button class="filter_6" style="position: absolute;top: 88%;left:3%;" onclick="filter_a()">開始</button>
+    <button class="filter_6" style="position: absolute;top: 88%;left: 35%;" onclick="filter_b()">清除</button>
+    <button class="filter_6" style="position: absolute;top: 88%;left: 67%;" onclick="filter()">取消</button>
+</div>
+
+
+
+<script>
+
+    var list = [
+        {
+            "d1": 'd1',
+            "d2": 'd2',
+            "d3": 'd3',
+            "d4": 'd4',
+            "d5": 'd5',
+            "d6": 'd6',
+            "d7": 'd7',
+            "d8": 'd8',
+            "d9": 'd9',
+            "d10": 'd10',
+            "d11": 'd11',
+            "d12": 'd12',
+            "d13": 'd13',
+            "d14": 'd14',
+            "d15": 'd15',
+            "d16": 'd16',
+            "d17": 'd17',
+            "d18": 'd18',
+            "d19": 'd19',
+            "d20": 'd20',
+            "d21": 'd21',
+            "d22": 'd22',
+            "d23": 'd23',
+            "d24": 'd24',
+            "d25": 'd25',
+            "d26": 'd26',
+            "d27": 'd27',
+            "d28": 'd28',
+            "d29": 'd29',
+            "d30": 'd30',
+            "d31": 'd31',
+            "d32": 'd32',
+            "d33": 'd33',
+            "d34": 'd34',
+            "d35": 'd35',
+            "d36": 'd36',
+            "d37": 'd37',
+            "d38": 'd38',
+            "d39": 'd39',
+            "d40": 'd40',
+            "d41": 'd41',
+            "d42": 'd42',
+            "d43": 'd43',
+            "d44": 'd44',
+            "d45": 'd45',
+            "d46": 'd46',
+            "d47": 'd47',
+            "d48": 'd48',
+            "d49": 'd49',
+        },
+        {
+            "d1": 'd1',
+            "d2": 'd2',
+            "d3": 'd3',
+            "d4": 'd4',
+            "d5": 'd5',
+            "d6": 'd6',
+            "d7": 'd7',
+            "d8": 'd8',
+            "d9": 'd9',
+            "d10": 'd10',
+            "d11": 'd11',
+            "d12": 'd12',
+            "d13": 'd13',
+            "d14": 'd14',
+            "d15": 'd15',
+            "d16": 'd16',
+            "d17": 'd17',
+            "d18": 'd18',
+            "d19": 'd19',
+            "d20": 'd20',
+            "d21": 'd21',
+            "d22": 'd22',
+            "d23": 'd23',
+            "d24": 'd24',
+            "d25": 'd25',
+            "d26": 'd26',
+            "d27": 'd27',
+            "d28": 'd28',
+            "d29": 'd29',
+            "d30": 'd30',
+            "d31": 'd31',
+            "d32": 'd32',
+            "d33": 'd33',
+            "d34": 'd34',
+            "d35": 'd35',
+            "d36": 'd36',
+            "d37": 'd37',
+            "d38": 'd38',
+            "d39": 'd39',
+            "d40": 'd40',
+            "d41": 'd41',
+            "d42": 'd42',
+            "d43": 'd43',
+            "d44": 'd44',
+            "d45": 'd45',
+            "d46": 'd46',
+            "d47": 'd47',
+            "d48": 'd48',
+            "d49": 'd49',
+        }
+    ];
+
+    var list_2 = [
+        {
+            "d1": 'd1',
+            "d2": 'd2',
+            "d3": 'd3',
+            "d4": 'd4',
+            "d5": 'd5',
+            "d6": 'd6',
+            "d7": 'd7',
+            "d8": 'd8',
+            "d9": 'd9',
+            "d10": 'd10',
+            "d11": 'd11',
+            "d12": 'd12',
+            "d13": 'd13',
+            "d14": 'd14',
+            "d15": 'd15',
+            "d16": 'd16',
+            "d17": 'd17',
+            "d18": 'd18',
+            "d19": 'd19',
+            "d20": 'd20',
+            "d21": 'd21',
+            "d22": 'd22',
+            "d23": 'd23',
+            "d24": 'd24',
+            "d25": 'd25',
+            "d26": 'd26',
+            "d27": 'd27',
+            "d28": 'd28',
+            "d29": 'd29',
+            "d30": 'd30',
+            "d31": 'd31',
+            "d32": 'd32',
+            "d33": 'd33',
+            "d34": 'd34',
+            "d35": 'd35',
+            "d36": 'd36',
+            "d37": 'd37',
+            "d38": 'd38',
+            "d39": 'd39',
+            "d40": 'd40',
+            "d41": 'd41',
+            "d42": 'd42',
+            "d43": 'd43',
+            "d44": 'd44',
+            "d45": 'd45',
+            "d46": 'd46',
+            "d47": 'd47',
+            "d48": 'd48',
+            "d49": 'd49',
+        }
+    ]
+
+    var list_3 = [
+        {
+            'p4': 'p4',
+            'p5': 'p5',
+            'p9': 'p9',
+            'p10': 'p10'
+        },
+        {
+            'p4': 'p4',
+            'p5': 'p5',
+            'p9': 'p9',
+            'p10': 'p10'
+        },
+        {
+            'p4': 'p4',
+            'p5': 'p5',
+            'p9': 'p9',
+            'p10': 'p10'
+        }
+    ]
+
+    var list_4 = [
+        {
+            'd19': 'd19',
+            'd20': 'd20',
+            'd21': 'd21'
+        }
+    ]
+   
+    $(document).ready(function () { //用程式設定屬性
+        var dtlfatable = $('.dtlfatable');
+        var dtlfatable_2 = $('.dtlfatable_2');       
+        try {
+            $.each(list, function (index, element) {
+                var tr = document.createElement("tr");
+                $(tr).attr("class", "td1");
+                dtlfatable.append(tr);
+                //案件
+                var td1 = document.createElement("td");
+                $(td1).text(element.d1);
+                $(tr).append(td1);
+                //流水號
+                var td2 = document.createElement("td");
+                $(td2).text(element.d2);
+                $(tr).append(td2);
+                //姓名null
+                var td3 = document.createElement("td");
+                $(td3).text(element.d3);
+                $(tr).append(td3);
+                //就診日期
+                var td4 = document.createElement("td");
+                $(td4).text(element.d4);
+                $(tr).append(td4);
+                //醫藥費null
+                var td5 = document.createElement("td");
+                $(td5).text(element.d5);
+                $(tr).append(td5);
+                //診療費null
+                var td6 = document.createElement("td");
+                $(td6).text(element.d6);
+                $(tr).append(td6);
+                //診察費null
+                var td7 = document.createElement("td");
+                $(td7).text(element.d7);
+                $(tr).append(td7);
+                //藥服費null
+                var td8 = document.createElement("td");
+                $(td8).text(element.d8);
+                $(tr).append(td8);
+                //部分負擔
+                var td9 = document.createElement("td");
+                $(td9).text(element.d9);
+                $(tr).append(td9);
+                //申請金額
+                var td10 = document.createElement("td");
+                $(td10).text(element.d10);
+                $(tr).append(td10);
+                //出生年月日
+                var td11 = document.createElement("td");
+                $(td11).text(element.d11);
+                $(tr).append(td11);
+                //
+                var td12 = document.createElement("td");
+                $(td12).text(element.d12);
+                $(tr).append(td12);
+                //姓名null
+                var td13 = document.createElement("td");
+                $(td13).text(element.d13);
+                $(tr).append(td13);
+                //就診日期
+                var td14 = document.createElement("td");
+                $(td14).text(element.d14);
+                $(tr).append(td14);
+                //醫藥費null
+                var td15 = document.createElement("td");
+                $(td15).text(element.d15);
+                $(tr).append(td15);
+                //診療費null
+                var td16 = document.createElement("td");
+                $(td16).text(element.d16);
+                $(tr).append(td16);
+                //診察費null
+                var td17 = document.createElement("td");
+                $(td17).text(element.d17);
+                $(tr).append(td17);
+                //藥服費null
+                var td18 = document.createElement("td");
+                $(td18).text(element.d18);
+                $(tr).append(td18);
+                //部分負擔
+                var td19 = document.createElement("td");
+                $(td19).text(element.d19);
+                $(tr).append(td19);
+                //申請金額
+                var td20 = document.createElement("td");
+                $(td20).text(element.d20);
+                $(tr).append(td20);
+                //
+                var td21 = document.createElement("td");
+                $(td21).text(element.d21);
+                $(tr).append(td21);
+                //流水號
+                var td22 = document.createElement("td");
+                $(td22).text(element.d22);
+                $(tr).append(td22);
+                //姓名null
+                var td23 = document.createElement("td");
+                $(td23).text(element.d23);
+                $(tr).append(td23);
+                //就診日期
+                var td24 = document.createElement("td");
+                $(td24).text(element.d24);
+                $(tr).append(td24);
+                //醫藥費null
+                var td25 = document.createElement("td");
+                $(td25).text(element.d25);
+                $(tr).append(td25);
+                //診療費null
+                var td26 = document.createElement("td");
+                $(td26).text(element.d26);
+                $(tr).append(td26);
+                //診察費null
+                var td27 = document.createElement("td");
+                $(td27).text(element.d27);
+                $(tr).append(td27);
+                //藥服費null
+                var td28 = document.createElement("td");
+                $(td28).text(element.d28);
+                $(tr).append(td28);
+                //部分負擔
+                var td29 = document.createElement("td");
+                $(td29).text(element.d29);
+                $(tr).append(td29);
+                //申請金額
+                var td30 = document.createElement("td");
+                $(td30).text(element.d30);
+                $(tr).append(td30);
+                //
+                var td31 = document.createElement("td");
+                $(td31).text(element.d31);
+                $(tr).append(td31);
+                //流水號
+                var td32 = document.createElement("td");
+                $(td32).text(element.d32);
+                $(tr).append(td32);
+                //姓名null
+                var td33 = document.createElement("td");
+                $(td33).text(element.d33);
+                $(tr).append(td33);
+                //就診日期
+                var td34 = document.createElement("td");
+                $(td34).text(element.d34);
+                $(tr).append(td34);
+                //醫藥費null
+                var td35 = document.createElement("td");
+                $(td35).text(element.d35);
+                $(tr).append(td35);
+                //診療費null
+                var td36 = document.createElement("td");
+                $(td36).text(element.d36);
+                $(tr).append(td36);
+                //診察費null
+                var td37 = document.createElement("td");
+                $(td37).text(element.d37);
+                $(tr).append(td37);
+                //藥服費null
+                var td38 = document.createElement("td");
+                $(td38).text(element.d38);
+                $(tr).append(td38);
+                //部分負擔
+                var td39 = document.createElement("td");
+                $(td39).text(element.d39);
+                $(tr).append(td39);
+                //申請金額
+                var td40 = document.createElement("td");
+                $(td40).text(element.d40);
+                $(tr).append(td40);
+                //
+                var td41 = document.createElement("td");
+                $(td41).text(element.d41);
+                $(tr).append(td41);
+                //流水號
+                var td42 = document.createElement("td");
+                $(td42).text(element.d42);
+                $(tr).append(td42);
+                //姓名null
+                var td43 = document.createElement("td");
+                $(td43).text(element.d43);
+                $(tr).append(td43);
+                //就診日期
+                var td44 = document.createElement("td");
+                $(td44).text(element.d44);
+                $(tr).append(td44);
+                //醫藥費null
+                var td45 = document.createElement("td");
+                $(td45).text(element.d45);
+                $(tr).append(td45);
+                //診療費null
+                var td46 = document.createElement("td");
+                $(td46).text(element.d46);
+                $(tr).append(td46);
+                //診察費null
+                var td47 = document.createElement("td");
+                $(td47).text(element.d47);
+                $(tr).append(td47);
+                //藥服費null
+                var td48 = document.createElement("td");
+                $(td48).text(element.d48);
+                $(tr).append(td48);
+                //部分負擔
+                var td49 = document.createElement("td");
+                $(td49).text(element.d49);
+                $(tr).append(td49);
+                
+                $('.td1').click(function () {
+                    $('.td1').css('background', '#ffffff');
+                    $(this).css('background', '#ff0000');
+                    $('.dtlfatable_2').empty();
+                    $.each(list_2, function (index, element) {
+                        //案件分類
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('案件分類');
+                        $(td1).css('width', '60%');
+                        $(tr).append(td1);
+                        var td1 = document.createElement("td");
+                        $(td1).text(element.d1);
+                        $(tr).append(td1);
+                        //流水號
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('流水編號');
+                        $(tr).append(td1);
+                        var td2 = document.createElement("td");
+                        $(td2).text(element.d2);
+                        $(tr).append(td2);
+                        //身分證統一編號
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('身分證統一編號');
+                        $(tr).append(td1);
+                        var td3 = document.createElement("td");
+                        $(td3).text(element.d3);
+                        $(tr).append(td3);
+                        //特定治療項目代號(一)
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('特定治療項目代號(一)');
+                        $(tr).append(td1);
+                        var td4 = document.createElement("td");
+                        $(td4).text(element.d4);
+                        $(tr).append(td4);
+                        //特定治療項目代號(二)
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('特定治療項目代號(二)');
+                        $(tr).append(td1);
+                        var td5 = document.createElement("td");
+                        $(td5).text(element.d5);
+                        $(tr).append(td5);
+                        //特定治療項目代號(三)
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('特定治療項目代號(三)');
+                        $(tr).append(td1);
+                        var td6 = document.createElement("td");
+                        $(td6).text(element.d6);
+                        $(tr).append(td6);
+                        // 特定治療項目代號(四) 
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('特定治療項目代號(四)');
+                        $(tr).append(td1);
+                        var td7 = document.createElement("td");
+                        $(td7).text(element.d7);
+                        $(tr).append(td7);
+                        //就醫科別
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('就醫科別');
+                        $(tr).append(td1);
+                        var td8 = document.createElement("td");
+                        $(td8).text(element.d8);
+                        $(tr).append(td8);
+                        //就醫日期
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('就醫日期');
+                        $(tr).append(td1);
+                        var td9 = document.createElement("td");
+                        $(td9).text(element.d9);
+                        $(tr).append(td9);
+                        //治療結束日期
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('治療結束日期');
+                        $(tr).append(td1);
+                        var td10 = document.createElement("td");
+                        $(td10).text(element.d10);
+                        $(tr).append(td10);
+                        //出生年月日
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('出生年月日');
+                        $(tr).append(td1);
+                        var td11 = document.createElement("td");
+                        $(td11).text(element.d11);
+                        $(tr).append(td11);
+                        //補報原因註記
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('補報原因註記');
+                        $(tr).append(td1);
+                        var td12 = document.createElement("td");
+                        $(td12).text(element.d12);
+                        $(tr).append(td12);
+                        //整合式照護計畫註記
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('整合式照護計畫註記');
+                        $(tr).append(td1);
+                        var td13 = document.createElement("td");
+                        $(td13).text(element.d13);
+                        $(tr).append(td13);
+                        //給付類別
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('給付類別');
+                        $(tr).append(td1);
+                        var td14 = document.createElement("td");
+                        $(td14).text(element.d14);
+                        $(tr).append(td14);
+                        //部分負擔代號
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('部分負擔代號');
+                        $(tr).append(td1);
+                        var td15 = document.createElement("td");
+                        $(td15).text(element.d15);
+                        $(tr).append(td15);
+                        //轉入或原處方或轉檢或代檢之註記
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('轉入或原處方或轉檢或代檢之註記');
+                        $(tr).append(td1);
+                        var td16 = document.createElement("td");
+                        $(td16).text(element.d16);
+                        $(tr).append(td16);
+                        //轉入或原處方或轉檢或代檢之服務機構代號
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('轉入或原處方或轉檢或代檢之服務機構代號');
+                        $(tr).append(td1);
+                        var td17 = document.createElement("td");
+                        $(td17).text(element.d17);
+                        $(tr).append(td17);
+                        //病患是否轉出
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('病患是否轉出');
+                        $(tr).append(td1);
+                        var td18 = document.createElement("td");
+                        $(td18).text(element.d18);
+                        $(tr).append(td18);
+                        //國際疾病分類號(一) 
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('國際疾病分類號(一)');
+                        $(tr).append(td1);
+                        var td19 = document.createElement("td");
+                        $(td19).text(element.d19);
+                        $(tr).append(td19);
+                        //國際疾病分類號(二)
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('國際疾病分類號(二)');
+                        $(tr).append(td1);
+                        var td20 = document.createElement("td");
+                        $(td20).text(element.d20);
+                        $(tr).append(td20);
+                        //國際疾病分類號(三)
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('國際疾病分類號(三)');
+                        $(tr).append(td1);
+                        var td21 = document.createElement("td");
+                        $(td21).text(element.d21);
+                        $(tr).append(td21);
+                        //國際疾病分類號(四)
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('國際疾病分類號(四)');
+                        $(tr).append(td1);
+                        var td22 = document.createElement("td");
+                        $(td22).text(element.d22);
+                        $(tr).append(td22);
+                        //國際疾病分類號(五)
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('國際疾病分類號(五)');
+                        $(tr).append(td1);
+                        var td23 = document.createElement("td");
+                        $(td23).text(element.d23);
+                        $(tr).append(td23);
+                        //主手術代碼
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('主手術代碼');
+                        $(tr).append(td1);
+                        var td24 = document.createElement("td");
+                        $(td24).text(element.d24);
+                        $(tr).append(td24);
+                        //次手術代碼
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('次手術代碼(一)');
+                        $(tr).append(td1);
+                        var td25 = document.createElement("td");
+                        $(td25).text(element.d25);
+                        $(tr).append(td25);
+                        //次手術代碼(二)
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('次手術代碼(二)');
+                        $(tr).append(td1);
+                        var td26 = document.createElement("td");
+                        $(td26).text(element.d26);
+                        $(tr).append(td26);
+                        //給藥日份
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('給藥日份');
+                        $(tr).append(td1);
+                        var td27 = document.createElement("td");
+                        $(td27).text(element.d27);
+                        $(tr).append(td27);
+                        //處方調劑方式
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('處方調劑方式');
+                        $(tr).append(td1);
+                        var td28 = document.createElement("td");
+                        $(td28).text(element.d28);
+                        $(tr).append(td28);
+                        //健保卡就醫序號
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('健保卡就醫序號');
+                        $(tr).append(td1);
+                        var td29 = document.createElement("td");
+                        $(td29).text(element.d29);
+                        $(tr).append(td29);
+                        //診治醫師代號
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('診治醫師代號');
+                        $(tr).append(td1);
+                        var td30 = document.createElement("td");
+                        $(td30).text(element.d30);
+                        $(tr).append(td30);
+                        //藥師代號
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('藥師代號');
+                        $(tr).append(td1);
+                        var td31 = document.createElement("td");
+                        $(td31).text(element.d31);
+                        $(tr).append(td31);
+                        //用藥明細點數小計
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('用藥明細點數小計');
+                        $(tr).append(td1);
+                        var td32 = document.createElement("td");
+                        $(td32).text(element.d32);
+                        $(tr).append(td32);
+                        //診療明細點數小計
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('用藥明細點數小計');
+                        $(tr).append(td1);
+                        var td33 = document.createElement("td");
+                        $(td33).text(element.d33);
+                        $(tr).append(td33);
+                        //特殊材料明細點數小計 
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('特殊材料明細點數小計');
+                        $(tr).append(td1);
+                        var td34 = document.createElement("td");
+                        $(td34).text(element.d34);
+                        $(tr).append(td34);
+                        //診察費項目代號
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('診察費項目代號');
+                        $(tr).append(td1);
+                        var td35 = document.createElement("td");
+                        $(td35).text(element.d35);
+                        $(tr).append(td35);
+                        //診察費點數
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('診察費點數');
+                        $(tr).append(td1);
+                        var td36 = document.createElement("td");
+                        $(td36).text(element.d36);
+                        $(tr).append(td36);
+                        //藥事服務費項目代號
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('藥事服務費項目代號');
+                        $(tr).append(td1);
+                        var td37 = document.createElement("td");
+                        $(td37).text(element.d37);
+                        $(tr).append(td37);
+                        //藥事服務費點數
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('藥事服務費點數');
+                        $(tr).append(td1);
+                        var td38 = document.createElement("td");
+                        $(td38).text(element.d38);
+                        $(tr).append(td38);
+                        //合計點數
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('合計點數');
+                        $(tr).append(td1);
+                        var td39 = document.createElement("td");
+                        $(td39).text(element.d39);
+                        $(tr).append(td39);
+                        //部分負擔點數
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('部分負擔點數');
+                        $(tr).append(td1);
+                        var td40 = document.createElement("td");
+                        $(td40).text(element.d40);
+                        $(tr).append(td40);
+                        //申請點數
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('申請點數');
+                        $(tr).append(td1);
+                        var td41 = document.createElement("td");
+                        $(td41).text(element.d41);
+                        $(tr).append(td41);
+                        //論病例計酬代碼
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('論病例計酬代碼');
+                        $(tr).append(td1);
+                        var td42 = document.createElement("td");
+                        $(td42).text(element.d42);
+                        $(tr).append(td42);
+                        //行政協助費用點數
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('行政協助費用點數');
+                        $(tr).append(td1);
+                        var td43 = document.createElement("td");
+                        $(td43).text(element.d43);
+                        $(tr).append(td43);
+                        //慢性病連續處方箋有效期間總處方日份
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('慢性病連續處方箋有效期間總處方日份');
+                        $(tr).append(td1);
+                        var td44 = document.createElement("td");
+                        $(td44).text(element.d44);
+                        $(tr).append(td44);
+                        //依附就醫新生兒出生日期
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('依附就醫新生兒出生日期');
+                        $(tr).append(td1);
+                        var td45 = document.createElement("td");
+                        $(td45).text(element.d45);
+                        $(tr).append(td45);
+                        //急診治療起始時間
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('急診治療起始時間');
+                        $(tr).append(td1);
+                        var td46 = document.createElement("td");
+                        $(td46).text(element.d46);
+                        $(tr).append(td46);
+                        //急診治療結束時間
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('急診治療結束時間');
+                        $(tr).append(td1);
+                        var td47 = document.createElement("td");
+                        $(td47).text(element.d47);
+                        $(tr).append(td47);
+                        //醫療服務計畫代碼
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('醫療服務計畫代碼');
+                        $(tr).append(td1);
+                        var td48 = document.createElement("td");
+                        $(td48).text(element.d48);
+                        $(tr).append(td48);
+                        //姓名
+                        var tr = document.createElement("tr");
+                        dtlfatable_2.append(tr);
+                        var td1 = document.createElement("td");
+                        $(td1).text('姓名');
+                        $(tr).append(td1);
+                        var td49 = document.createElement("td");
+                        $(td49).text(element.d49);
+                        $(tr).append(td49);
+                    });
+                }
+                );
+            });
+            
+            $.each(list_2, function (index, element) {
+                //案件分類
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('案件分類');
+                $(td1).css('width', '60%');
+                $(tr).append(td1);
+                var td1 = document.createElement("td");
+                $(td1).text(element.d1);
+                $(tr).append(td1);
+                //流水號
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('流水編號');
+                $(tr).append(td1);
+                var td2 = document.createElement("td");
+                $(td2).text(element.d2);
+                $(tr).append(td2);
+                //身分證統一編號
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('身分證統一編號');
+                $(tr).append(td1);
+                var td3 = document.createElement("td");
+                $(td3).text(element.d3);
+                $(tr).append(td3);
+                //特定治療項目代號(一)
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('特定治療項目代號(一)');
+                $(tr).append(td1);
+                var td4 = document.createElement("td");
+                $(td4).text(element.d4);
+                $(tr).append(td4);
+                //特定治療項目代號(二)
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('特定治療項目代號(二)');
+                $(tr).append(td1);
+                var td5 = document.createElement("td");
+                $(td5).text(element.d5);
+                $(tr).append(td5);
+                //特定治療項目代號(三)
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('特定治療項目代號(三)');
+                $(tr).append(td1);
+                var td6 = document.createElement("td");
+                $(td6).text(element.d6);
+                $(tr).append(td6);
+                // 特定治療項目代號(四) 
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('特定治療項目代號(四)');
+                $(tr).append(td1);
+                var td7 = document.createElement("td");
+                $(td7).text(element.d7);
+                $(tr).append(td7);
+                //就醫科別
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('就醫科別');
+                $(tr).append(td1);
+                var td8 = document.createElement("td");
+                $(td8).text(element.d8);
+                $(tr).append(td8);
+                //就醫日期
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('就醫日期');
+                $(tr).append(td1);
+                var td9 = document.createElement("td");
+                $(td9).text(element.d9);
+                $(tr).append(td9);
+                //治療結束日期
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('治療結束日期');
+                $(tr).append(td1);
+                var td10 = document.createElement("td");
+                $(td10).text(element.d10);
+                $(tr).append(td10);
+                //出生年月日
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('出生年月日');
+                $(tr).append(td1);
+                var td11 = document.createElement("td");
+                $(td11).text(element.d11);
+                $(tr).append(td11);
+                //補報原因註記
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('補報原因註記');
+                $(tr).append(td1);
+                var td12 = document.createElement("td");
+                $(td12).text(element.d12);
+                $(tr).append(td12);
+                //整合式照護計畫註記
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('整合式照護計畫註記');
+                $(tr).append(td1);
+                var td13 = document.createElement("td");
+                $(td13).text(element.d13);
+                $(tr).append(td13);
+                //給付類別
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('給付類別');
+                $(tr).append(td1);
+                var td14 = document.createElement("td");
+                $(td14).text(element.d14);
+                $(tr).append(td14);
+                //部分負擔代號
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('部分負擔代號');
+                $(tr).append(td1);
+                var td15 = document.createElement("td");
+                $(td15).text(element.d15);
+                $(tr).append(td15);
+                //轉入或原處方或轉檢或代檢之註記
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('轉入或原處方或轉檢或代檢之註記');
+                $(tr).append(td1);
+                var td16 = document.createElement("td");
+                $(td16).text(element.d16);
+                $(tr).append(td16);
+                //轉入或原處方或轉檢或代檢之服務機構代號
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('轉入或原處方或轉檢或代檢之服務機構代號');
+                $(tr).append(td1);
+                var td17 = document.createElement("td");
+                $(td17).text(element.d17);
+                $(tr).append(td17);
+                //病患是否轉出
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('病患是否轉出');
+                $(tr).append(td1);
+                var td18 = document.createElement("td");
+                $(td18).text(element.d18);
+                $(tr).append(td18);
+                //國際疾病分類號(一) 
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('國際疾病分類號(一)');
+                $(tr).append(td1);
+                var td19 = document.createElement("td");
+                $(td19).text(element.d19);
+                $(tr).append(td19);
+                //國際疾病分類號(二)
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('國際疾病分類號(二)');
+                $(tr).append(td1);
+                var td20 = document.createElement("td");
+                $(td20).text(element.d20);
+                $(tr).append(td20);
+                //國際疾病分類號(三)
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('國際疾病分類號(三)');
+                $(tr).append(td1);
+                var td21 = document.createElement("td");
+                $(td21).text(element.d21);
+                $(tr).append(td21);
+                //國際疾病分類號(四)
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('國際疾病分類號(四)');
+                $(tr).append(td1);
+                var td22 = document.createElement("td");
+                $(td22).text(element.d22);
+                $(tr).append(td22);
+                //國際疾病分類號(五)
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('國際疾病分類號(五)');
+                $(tr).append(td1);
+                var td23 = document.createElement("td");
+                $(td23).text(element.d23);
+                $(tr).append(td23);
+                //主手術代碼
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('主手術代碼');
+                $(tr).append(td1);
+                var td24 = document.createElement("td");
+                $(td24).text(element.d24);
+                $(tr).append(td24);
+                //次手術代碼
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('次手術代碼(一)');
+                $(tr).append(td1);
+                var td25 = document.createElement("td");
+                $(td25).text(element.d25);
+                $(tr).append(td25);
+                //次手術代碼(二)
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('次手術代碼(二)');
+                $(tr).append(td1);
+                var td26 = document.createElement("td");
+                $(td26).text(element.d26);
+                $(tr).append(td26);
+                //給藥日份
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('給藥日份');
+                $(tr).append(td1);
+                var td27 = document.createElement("td");
+                $(td27).text(element.d27);
+                $(tr).append(td27);
+                //處方調劑方式
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('處方調劑方式');
+                $(tr).append(td1);
+                var td28 = document.createElement("td");
+                $(td28).text(element.d28);
+                $(tr).append(td28);
+                //健保卡就醫序號
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('健保卡就醫序號');
+                $(tr).append(td1);
+                var td29 = document.createElement("td");
+                $(td29).text(element.d29);
+                $(tr).append(td29);
+                //診治醫師代號
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('診治醫師代號');
+                $(tr).append(td1);
+                var td30 = document.createElement("td");
+                $(td30).text(element.d30);
+                $(tr).append(td30);
+                //藥師代號
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('藥師代號');
+                $(tr).append(td1);
+                var td31 = document.createElement("td");
+                $(td31).text(element.d31);
+                $(tr).append(td31);
+                //用藥明細點數小計
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('用藥明細點數小計');
+                $(tr).append(td1);
+                var td32 = document.createElement("td");
+                $(td32).text(element.d32);
+                $(tr).append(td32);
+                //診療明細點數小計
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('用藥明細點數小計');
+                $(tr).append(td1);
+                var td33 = document.createElement("td");
+                $(td33).text(element.d33);
+                $(tr).append(td33);
+                //特殊材料明細點數小計 
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('特殊材料明細點數小計');
+                $(tr).append(td1);
+                var td34 = document.createElement("td");
+                $(td34).text(element.d34);
+                $(tr).append(td34);
+                //診察費項目代號
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('診察費項目代號');
+                $(tr).append(td1);
+                var td35 = document.createElement("td");
+                $(td35).text(element.d35);
+                $(tr).append(td35);
+                //診察費點數
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('診察費點數');
+                $(tr).append(td1);
+                var td36 = document.createElement("td");
+                $(td36).text(element.d36);
+                $(tr).append(td36);
+                //藥事服務費項目代號
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('藥事服務費項目代號');
+                $(tr).append(td1);
+                var td37 = document.createElement("td");
+                $(td37).text(element.d37);
+                $(tr).append(td37);
+                //藥事服務費點數
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('藥事服務費點數');
+                $(tr).append(td1);
+                var td38 = document.createElement("td");
+                $(td38).text(element.d38);
+                $(tr).append(td38);
+                //合計點數
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('合計點數');
+                $(tr).append(td1);
+                var td39 = document.createElement("td");
+                $(td39).text(element.d39);
+                $(tr).append(td39);
+                //部分負擔點數
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('部分負擔點數');
+                $(tr).append(td1);
+                var td40 = document.createElement("td");
+                $(td40).text(element.d40);
+                $(tr).append(td40);
+                //申請點數
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('申請點數');
+                $(tr).append(td1);
+                var td41 = document.createElement("td");
+                $(td41).text(element.d41);
+                $(tr).append(td41);
+                //論病例計酬代碼
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('論病例計酬代碼');
+                $(tr).append(td1);
+                var td42 = document.createElement("td");
+                $(td42).text(element.d42);
+                $(tr).append(td42);
+                //行政協助費用點數
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('行政協助費用點數');
+                $(tr).append(td1);
+                var td43 = document.createElement("td");
+                $(td43).text(element.d43);
+                $(tr).append(td43);
+                //慢性病連續處方箋有效期間總處方日份
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('慢性病連續處方箋有效期間總處方日份');
+                $(tr).append(td1);
+                var td44 = document.createElement("td");
+                $(td44).text(element.d44);
+                $(tr).append(td44);
+                //依附就醫新生兒出生日期
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('依附就醫新生兒出生日期');
+                $(tr).append(td1);
+                var td45 = document.createElement("td");
+                $(td45).text(element.d45);
+                $(tr).append(td45);
+                //急診治療起始時間
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('急診治療起始時間');
+                $(tr).append(td1);
+                var td46 = document.createElement("td");
+                $(td46).text(element.d46);
+                $(tr).append(td46);
+                //急診治療結束時間
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('急診治療結束時間');
+                $(tr).append(td1);
+                var td47 = document.createElement("td");
+                $(td47).text(element.d47);
+                $(tr).append(td47);
+                //醫療服務計畫代碼
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('醫療服務計畫代碼');
+                $(tr).append(td1);
+                var td48 = document.createElement("td");
+                $(td48).text(element.d48);
+                $(tr).append(td48);
+                //姓名
+                var tr = document.createElement("tr");
+                dtlfatable_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).text('姓名');
+                $(tr).append(td1);
+                var td49 = document.createElement("td");
+                $(td49).text(element.d49);
+                $(tr).append(td49);
+
+            }); 
+            
+        }
+        catch (e) {
+        }
+
+    });
+    //醫令按鈕
+    function ordfa() {
+        var ordfa_2 = $('.ordfa_2');
+        var display = $('.ordfa').css('display');
+        if (display == 'none') {
+
+
+            var tr = document.createElement("tr");
+            $(tr).css('color', '#ffffff');
+            $(tr).css('background', '#5cb75c');
+            ordfa_2.append(tr);
+            var td1 = document.createElement("td");
+            $(td1).text('藥品名稱');
+            $(tr).append(td1);
+            var td2 = document.createElement("td");
+            $(td2).text('用量');
+            $(tr).append(td2);
+            var td3 = document.createElement("td");
+            $(td3).text('用法');
+            $(tr).append(td3);
+            var td4 = document.createElement("td");
+            $(td4).text('總量');
+            $(tr).append(td4);
+
+            $.each(list_3, function (index, element) {
+                var tr = document.createElement("tr");
+                ordfa_2.append(tr);
+                var td1 = document.createElement("td");
+                $(td1).css('background', '#f5ffdd');
+                $(td1).text(element.p4);
+                $(tr).append(td1);
+                var td2 = document.createElement("td");
+                $(td2).text(element.p5);
+                $(tr).append(td2);
+                var td3 = document.createElement("td");
+                $(td3).text(element.p9);
+                $(tr).append(td3);
+                var td4 = document.createElement("td");
+                $(td4).text(element.p10);
+                $(tr).append(td4);
+                $('.ordfa').show()
+            });
+            $.each(list_4, function (index, element) {
+                var tr = document.createElement("tr");
+                $('.ordfa_1').append(tr);
+                var td1 = document.createElement("td");
+                $(td1).attr('class', 'ordfa_1_1');
+                $(td1).text(element.d19);
+                $(tr).append(td1);
+                var td2 = document.createElement("td");
+                $(td2).attr('class', 'ordfa_1_2');
+                $(td2).text(element.d19);
+                $(tr).append(td2);
+                var tr = document.createElement("tr");
+                $('.ordfa_1').append(tr);
+                var td1 = document.createElement("td");
+                $(td1).attr('class', 'ordfa_1_1');
+                $(td1).text(element.d20);
+                $(tr).append(td1);
+                var td2 = document.createElement("td");
+                $(td2).attr('class', 'ordfa_1_2');
+                $(td2).text(element.d20);
+                $(tr).append(td2);
+                var tr = document.createElement("tr");
+                $('.ordfa_1').append(tr);
+                var td1 = document.createElement("td");
+                $(td1).attr('class', 'ordfa_1_1');
+                $(td1).text(element.d21);
+                $(tr).append(td1);
+                var td2 = document.createElement("td");
+                $(td2).attr('class', 'ordfa_1_2');
+                $(td2).text(element.d21);
+                $(tr).append(td2);
+            });
+        }
+        else {
+            $('.ordfa_1').empty()
+            $('.ordfa_2').empty()
+            $('.ordfa').hide()
+        }       
+    }
+
+    //關閉篩選
+    function filter() {
+        var display = $('.filter').css('display');
+        if (display == 'none') {
+            $('.filter').show()
+        }
+        else {
+            $('.filter').hide()
+        }
+
+    }
+
+    function filter_a() {
+        /*
+         開始篩選
+        */
+
+    }
+    //篩選條件清空
+    function filter_b() {
+        $('select').val(1);
+        $('.filter_2').prop('checked', false);
+        $('.filter_4').val(0);
+        $('.filter_5').val(0);
+
+
+    }
+</script>
+
+
+
